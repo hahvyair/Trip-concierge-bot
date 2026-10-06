@@ -36,7 +36,7 @@ Do checks 1–4 above, then look at `git log --oneline -5 -- trips/data` (when t
 2. `bash trips/webapp/deploy.sh` (Bash timeout 600000). It creates the storage, publishes the app, stores the bot token and owner id as Cloudflare secrets, and writes `trips/webapp/config.json`. It prints nothing secret. If it says there's no `workers.dev` subdomain: step 9.2, then run it again. If an authentication error: the token needs the **Edit Cloudflare Workers** template with the account selected (step 9.4).
 3. `git add trips/webapp/config.json trips/webapp/wrangler.toml && git commit -m "Trip app deployed"`, push to `main`.
 4. `python3 trips/splitbot/webapp_sync.py` (pushes the trips to the app).
-5. Give them the URL from the script's last line and point them to step 11.
+5. Give them the URL from the script's last line and point them to step 11, including 11.4 (the profile's Open App button needs the same URL set separately, or it opens blank).
 
 ## "The app short name is X" (SETUP.md step 11.3)
 

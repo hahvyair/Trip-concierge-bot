@@ -174,8 +174,9 @@ A Telegram app with tabs for balances, payments, charts, the plan, places and th
    - **Web App URL:** the address from step 10
    - **Short name:** e.g. `trip` (letters, digits and underscores)
 3. Back in your Claude session, type: **`The app short name is trip`** (with your short name).
+4. **The "Open App" button on your bot's profile.** It has its own setting, separate from steps 1–2. In @BotFather, send `/mybots`, choose your bot, then **Bot Settings** → **Configure Mini App** → **Enable Mini App** (or **Edit Mini App URL**), and send the address from step 10 exactly: no `t.me` link, nothing added at the end. Without this, that button opens a blank page.
 
-Now send `/app` in your trip group: the bot posts a button that opens the app. Everyone sees only the trips they're on.
+Now send `/app` in your trip group: the bot posts a button that opens the app. The profile's **Open App** button works too, and opens your current trip. Everyone sees only the trips they're on.
 
 ---
 
