@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>Trip</title>
+<link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-sc-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top" id="top" hidden>
+  <img class="avatar" src="duck-avatar.webp" width="48" height="48" alt="Trip Concierge Duck">
+  <div class="ident">
+    <h1 id="trip-name"></h1>
+    <p id="trip-sub" class="sub"></p>
+  </div>
+  <span class="phase" id="trip-phase"></span>
+  <label class="picker" id="picker-wrap" hidden><span class="sr">Trip</span><select id="picker"></select></label>
+</header>
+<nav class="tabs" id="tabs" role="tablist" hidden></nav>
+<main id="view"><p class="status" id="status">Loading…</p></main>
+<footer id="foot" hidden>
+  <p id="asof"></p>
+  <p>Payments and corrections go in the group chat. Names can be changed under People.</p>
+  <button type="button" id="refresh" class="link">Refresh</button>
+</footer>
+</body>
+</html>

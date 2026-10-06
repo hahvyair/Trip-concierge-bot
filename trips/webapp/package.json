@@ -1,0 +1,9 @@
+{
+  "name": "trip-app",
+  "private": true,
+  "type": "module",
+  "description": "Telegram Mini App for the trip bill-split bot (Cloudflare Worker). No runtime dependencies.",
+  "scripts": {
+    "test": "node --test test/*.mjs"
+  }
+}

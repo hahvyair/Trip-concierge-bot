@@ -1,0 +1,22 @@
+# Cloudflare Worker for the trip app. deploy.sh fills in the KV id and the
+# secrets (BOT_TOKEN, OWNER_ID); nothing secret lives in this file.
+name = "trip-app"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+workers_dev = true
+
+# The page, its script and stylesheet. The Worker runs first so every response
+# gets the security headers.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Per-trip snapshots pushed by the bot session (trips/splitbot/webapp_sync.py).
+[[kv_namespaces]]
+binding = "TRIPS"
+id = "KV_NAMESPACE_ID"
+
+# No request logs: initData and snapshots never reach a log.
+[observability]
+enabled = false
