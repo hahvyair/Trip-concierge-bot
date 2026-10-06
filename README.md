@@ -14,6 +14,8 @@ It never books or pays for anything. People still pay each other themselves.
 
 There is no server to rent. The bot's "brain" is Claude, running in a Claude Code cloud session on your own Claude subscription. A small script in that session waits for Telegram messages and wakes Claude only when one matters (a payment, a question for the bot). Claude reads it, uses the scripts in this repo to do the arithmetic, replies in the group, and saves the ledger back to your GitHub repo. A scheduled "routine" starts a fresh session twice a day, so it runs on its own.
 
+The method (a listener that exits to wake Claude, and why it stays cheap) is explained in [HOW-IT-WORKS.md](HOW-IT-WORKS.md). It works for other chat bots too.
+
 ## What you need
 
 | Thing | Cost | Why |
